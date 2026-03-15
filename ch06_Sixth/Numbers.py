@@ -24,6 +24,8 @@ print(2**100)
 result = 1/3.0
 print(result)
 
+result2 = 1/3
+print(result2)
 
 print(repr('chai')) # shows developer version how it is shown in code 
 print(str('chai'))  # readable version
@@ -37,7 +39,7 @@ print("is x<y<z ",x<y<z) # x<y and y<z
 
 print("is 1==2<3 ",1==2<3)  # 1==2 and 2<3 => False and True => False
 
-# MAths
+# Maths
 
 import math
 a = math.floor(3.5)
@@ -78,11 +80,14 @@ print("Binary value ",int('11100010101',2))
 # Bitwise Operator
 x=1
 print("Value of x ",x)
-print("Value of x<<2 ",x<<2) # x << n  ==  x × (2ⁿ)
+print("Value of x<<2 ",x<<2) # x << n  ==  x × (2ⁿ)   0001 <<2 => 0100
 print(x)
 print("Value of x|2 ",x|2) # 001 | 010 = 011 = 3
 x=4
 print("Square root of x is ",x ** 0.5)
+
+print("Value of x >>2 ",x>>2) #  x >> n = floor(x / 2^n)   0001 >> 2 => 0000
+print(x)
 
 # random
 
@@ -95,8 +100,8 @@ print(a)
 
 a = random.randint(1,10)
 print(a)
-a = random.randint(1,10)
-print(a)
+b = random.randint(1,10)
+print(b)
 
 
 li = ['lemon','masala','ginger','mint']
@@ -129,18 +134,21 @@ print(myFra)
 
 # Sets
 setOne = {1,2,3,4}
+print("Original set",setOne)
 print(setOne&{1,3})
 print(setOne|{1,3,7})
 print(setOne-{1,2,3,4})
+
+
 print(type({}))
 print(type(True))
 
 print(type(setOne))
+
 s = {}      # ❌ NOT a set
 s = set()   # ✅ correct empty set
 
 
-print("True ==1 ",True ==1)
-print("False ==0 ",False ==0)
+print("True == 1 ",True == 1)
+print("False == 0 ",False == 0)
 print("True is 1 ",True is 1 )
-print("True+4 ",True is 1 )

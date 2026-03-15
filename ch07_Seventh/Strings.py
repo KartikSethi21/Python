@@ -44,13 +44,13 @@ print(chai.split(" , "))
 print(chai)
 
 chai = 'Masala Chai'
-print("Find Chai",chai.find("Chai"))
+print("Find Chai",chai.find("Chai")) #at 7th index
 print("Find chai",chai.find("chai"))
 print("Find Masala",chai.find("Masala"))
 
-chai = "Masala Chai Chai Chai "
-print("Find Chai",chai.find("Chai"))
-print("Count Chai",chai.count("Chai"))
+chaik = "Masala Chai Chai Chai "
+print("Find Chai",chaik.find("Chai"))
+print("Count Chai",chaik.count("Chai"))
 
 # -----------------
 

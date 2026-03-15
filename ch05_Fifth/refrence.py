@@ -16,6 +16,7 @@ print(id(x))      # memory address (implementation detail)
 # x → [ int object (10) ]
 x = 10
 x = "hello"
+print(id(x))
 # Before:
 # x → [ int 10 ]
 # After:
@@ -27,6 +28,9 @@ a=1
 print("Value of a is ",a)
 a=a+1
 print("Value of a is ",a)
+a+=1
+print("Value of a is ",a)
+# No a++
 
 myListOne = [1,2,3]
 print("List1 is ",myListOne)
@@ -57,7 +61,7 @@ print("P1 LIST ",p1)
 print("P1 LIST ",p2)
 p1[1] = 55
 print("P1 LIST ",p1) 
-print("P1 LIST ",p2) 
+print("P2 LIST ",p2) 
 
 # MAKING A COPY => slicing
 h1 = [1,2,3]
@@ -72,21 +76,27 @@ print("H2 LIST ",h2)
 # Using Copy
 
 import copy 
-g1 = [1,2,3]
+g1 = [1,2,3,[3,5,62]]
 g2 = copy.copy(g1)
 print("G1 List is ",g1)
 print("G2 List is ",g2)
 g1[2]=76
 print("G1 List is ",g1)
 print("G2 List is ",g2)
+g1[3][0]=88
+print("G1 List is ",g1)
+print("G2 List is ",g2)
 
 
-g1 = [1,2,3]
+g1 = [1,2,3,[5,6,7]]
 g2 = copy.deepcopy(g1) # for list inside list
 
 print("G1 List is ",g1)
 print("G2 List is ",g2)
 g1[2]=76
+print("G1 List is ",g1)
+print("G2 List is ",g2)
+g1[3][0]=88
 print("G1 List is ",g1)
 print("G2 List is ",g2)
 
@@ -98,7 +108,7 @@ n=[1,2,3]
 m=n
 print("If  m==n",m==n)
 print("M IS n",m is n)
-n = [1,2,3]
+n = [1,2,3] # m = [1,2,3]
 print("If  m==n",m==n)
 print("M IS n",m is n)
 

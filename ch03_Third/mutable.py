@@ -14,3 +14,9 @@ x = 15
 print("Value of x ",x)
 print("Value of y ",y)
 
+
+user = 'sethi'
+user2 = user
+print(f"user1 is {user} and user2 is {user2}")
+user[0]='b' #'str' object does not support item assignment
+print(f"user1 is {user} and user2 is {user2}")

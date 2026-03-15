@@ -15,12 +15,13 @@ print(c,type(c))
 # module
 import os
 print(os.getcwd())
-
+print(os.mkdir("kart")) #return None
+print(os.removedirs("kart"))  #return None
 for c in "Kartik":
     print(c)
 
 import sys
 print(sys.platform)
 
-from First.First import chai
+from ch01_First.First import chai
 chai("FG")
