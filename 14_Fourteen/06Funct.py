@@ -1,6 +1,6 @@
 username = 'chai aur code'
 def func():
-    # print("Inside func use 1",username)
+    # print("Inside func use 1",username) #=> error , cannot access local variable 'username' where it is not associated with a value only if used later
     username = 'Kartik'
     print("Inside func after dec 2",username)
 
@@ -32,15 +32,16 @@ print("Value outside 2",x)
 
 # Nested function
 def f1():
-    x=99 #enclosing
+    y=99 #enclosing
     def f2():
-        print("Inside f2",x) #enclosing
-        return x
+        print("Inside f2 value of y",y) #enclosing
+        # y=90 will give error
+        return y
     return f2
 
 myresult = f1()
-a=myresult() # value of x
-print(a) # value of x
+a=myresult() # value of y
+print(a) # value of y
 
 
 def f1():
@@ -57,7 +58,7 @@ a=myresult() # value of x
 print("nonlocal",a) # value of x
 
 # why not use global 
-# becoz global will tell to look from whole module and no c in whole module tus error
+# becoz global will tell to look from whole module and no c in whole module thus error
 # nonlocal tells => “Use c from the nearest enclosing function, not local”
 
 
