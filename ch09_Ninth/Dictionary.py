@@ -39,7 +39,7 @@ print(chai_types)
 
 # Returns a tuple (key, value)
 b = chai_types.popitem()
-print(b)
+print(b,type(b))
 # Delete Last Item
 print(chai_types)
 
@@ -100,3 +100,38 @@ print(new_dict)
 new_dict= dict.fromkeys(keys,keys)
 print(new_dict)
 
+
+
+n = int(input())
+student_marks = {}
+for _ in range(n):
+     name, *line = input().split()
+     scores = list(map(float, line))
+     student_marks[name] = scores
+query_name = input()            
+
+
+
+if __name__ == '__main__':
+    N = int(input())
+    lst = []
+
+    for _ in range(N):
+        parts = input().split()
+        cmd = parts[0]
+
+        if cmd == "print":
+            print(lst)
+        else:
+            args = list(map(int, parts[1:]))
+
+            operations = {
+                "insert": lambda: lst.insert(args[0], args[1]),
+                "remove": lambda: lst.remove(args[0]),
+                "append": lambda: lst.append(args[0]),
+                "sort": lambda: lst.sort(),
+                "pop": lambda: lst.pop(),
+                "reverse": lambda: lst.reverse()
+            }
+
+            operations[cmd]()

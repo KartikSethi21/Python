@@ -50,12 +50,16 @@ for i in tea:
 print("\n")
 if "Oolong" in tea:
     print("I have Oolong tea")
+else:
+    print("No Oolong")
+
 if "White" in tea:
     print("I have White tea")
 tea.append("Oolong")
+print(tea)
 if "Oolong" in tea:
     print("I have Oolong tea")
-
+print(tea)
 tea.pop()
 print(tea)
 tea.remove("Bannana")
@@ -70,6 +74,7 @@ tea_copyed = tea.copy() # Different Reference
 tea_copyed.append("Kashmirir")
 print("Tea is ",tea)
 print("Tea Copyed is ",tea_copyed)
+print("Tea copy is (same ref)",tea_copy)
 tea_copy.pop()
 print("Tea is ",tea)
 print("Tea copy is ",tea_copy)
@@ -85,3 +90,50 @@ print([range(10)]) # [range(0, 10)]
 
 cube_y = [y**3 for y in range(0,13,3)]
 print(cube_y)
+
+
+a=["name","Kar","last","Sethi"]
+for x,y in enumerate(a):
+    print(x,y)
+
+
+
+if __name__ == '__main__':
+    N = int(input())
+    lst = []
+    for _ in range(0,N):
+        cmd, *args = input().split() 
+        
+        if cmd =="insert":
+            # i, e = map(int, args)
+            # lst.insert(i, e)
+            pos = int(args[0])
+            val = int(args[1])
+            lst.insert(pos,val)
+            
+        elif cmd == "remove":
+            val = int(args[0])
+            lst.remove(val)
+        
+        elif cmd == "print":
+            print(lst)
+            
+        elif cmd == "append":
+            val = int(args[0])
+            lst.append(val)
+        
+        elif cmd == "sort":
+            lst.sort()
+        
+        elif cmd == "pop":
+            lst.pop()
+            
+        elif cmd == "reverse":
+            lst.reverse()
+            
+            
+            
+            
+            
+            
+            

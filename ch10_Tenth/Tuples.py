@@ -52,3 +52,20 @@ print(type(g[0])) #str
 
 ind = g.index("Kart")
 print("Index of \'Kart\'",ind)
+
+a = tuple()
+print(a)
+
+b = ()
+print(b)
+
+# n = int(input())
+# t = tuple(map(int, input().split()))
+# print(t)
+# print(hash(t))
+
+
+a = input()
+for i in range(len(a)):
+    print(type(a[i]))
+    print(a[i],a[i].islower(),a[i].isupper())
