@@ -29,3 +29,36 @@ n = len(arr)
 rotate_k_right(arr,n,3)
 
 rotate_k_left(arr,n,3)
+
+print(arr[:])
+
+def reverse(arr, start, end):
+    while start < end:
+        arr[start], arr[end] = arr[end] , arr[start]
+        start+=1
+        end-=1
+# reverse(arr,0,n-1)
+# print(arr[:])
+
+# T.C - O(N)
+# S.C - O(1)
+def rotate_k_opt(arr, k, dir):
+    n= len(arr)
+    if n==0 or k==0:
+        return arr
+    k = k % n
+
+    if dir == "right":
+        reverse(arr,0,n-1) # reverse full array
+        reverse(arr,0,k-1) # reverse first k elements
+        reverse(arr,k,n-1) # reverse remaining elements
+    
+    elif dir == "left":
+        reverse(arr, 0, k-1) #reverse first k elements
+        reverse(arr,k, n-1) #reverse remaining elements   
+        reverse(arr,0,n-1) #reverse full array
+
+rotate_k_opt(arr,2,"right")
+print(arr[:])
+rotate_k_opt(arr,2,"left")
+print(arr[:])
