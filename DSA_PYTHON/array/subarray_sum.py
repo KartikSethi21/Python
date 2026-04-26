@@ -16,6 +16,7 @@ def longestSubarray_bruteforce(arr, k):
  
 # T.C - O(N)
 # S.C - O(1)
+# Only for positive numbers
 def longestSubarray_opt(arr, k):
     left = 0
     sum =0
@@ -39,4 +40,9 @@ arr = [1, 2, 2, 1, 5]
 k = 4
 
 longestSubarray_bruteforce(arr,k)
+# arr = [-1, 1, 1]
+# k = 1
+arr = [1, -1, 5, -2, 3]
+k = 3
 longestSubarray_opt(arr,k)
+

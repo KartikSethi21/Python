@@ -1,3 +1,6 @@
+from typing import List
+
+
 def is_sorted(arr):
     n = len(arr)
     for i in range(n):
@@ -47,13 +50,8 @@ def is_sorted_rotated(arr):
     # return True if cnt==1 else False
     return cnt<=1
 
-arr = [5, 1, 2, 3, 4]
-print("Is array rotated and sorted",is_sorted_rotated(arr))
-arr =  [1, 2, 6, 4, 5]
-print("Is array rotated and sorted",is_sorted_rotated(arr))
 
-
-def is_sorted_rotated(arr):
+def is_sorted_rotated_mod(arr):
     n = len(arr)
     cnt = 0
 
@@ -62,3 +60,23 @@ def is_sorted_rotated(arr):
             cnt += 1
 
     return cnt <= 1
+
+
+def check(self, nums: List[int]) -> bool:
+    n=len(nums)
+    count=0
+    for i in range(1,n):
+        if nums[i]<nums[i-1]:
+            count+=1
+    if nums[0]<nums[n-1]:
+        count+=1
+    return count<=1
+
+
+
+    
+arr = [5, 1, 2, 3, 4]
+print("Is array rotated and sorted",is_sorted_rotated(arr))
+arr =  [1, 2, 6, 4, 5]
+print("Is array rotated and sorted",is_sorted_rotated_mod(arr))
+
