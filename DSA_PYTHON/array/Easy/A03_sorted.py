@@ -79,4 +79,5 @@ arr = [5, 1, 2, 3, 4]
 print("Is array rotated and sorted",is_sorted_rotated(arr))
 arr =  [1, 2, 6, 4, 5]
 print("Is array rotated and sorted",is_sorted_rotated_mod(arr))
-
+arr=[5,4,3,2,1]
+print(is_sorted_rotated(arr))

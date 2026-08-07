@@ -31,3 +31,18 @@ rotate_left(arr,n)
 rotate_left_opt(arr,n)
 
 rotate_left(arr,n)
+
+# not for production
+def rotate_left_test(arr, n):
+    temp = [0]*n
+    for i in range(n):
+        temp[i-1] = arr[i]
+
+
+    for num in temp:
+        print(num,end=" ")
+    print()
+
+arr = [1, 2, 3, 4, 5]
+n = 5
+rotate_left_test(arr,n)

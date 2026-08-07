@@ -3,6 +3,8 @@ def rmv_dupli(arr):
     print(arr)
     # If order doesnot matter
 
+# T.C - O(N)
+# S.C - O(N)
 def rmv_dupli_bf(arr):
     seen =set()
 
@@ -15,6 +17,8 @@ def rmv_dupli_bf(arr):
     
     return ind
 
+# T.C - O(N)
+# S.C - O(1)
 def rmv_dupli_opt(arr):
     i = 0
     for j in range(i+1,len(arr)):

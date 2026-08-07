@@ -21,7 +21,7 @@ def rotate_right_opt(arr, n):
 
     for num in arr:
         print(num,end=" ")
-    print()
+    print()    
 
 
 n = 5

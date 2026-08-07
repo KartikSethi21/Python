@@ -19,7 +19,6 @@ def longestSubarray_forall(arr, k):
     print(max_len)
     return max_len
 
-
 arr = arr = [9, -3, 3, -1, 6, -5]
 k = 5
 

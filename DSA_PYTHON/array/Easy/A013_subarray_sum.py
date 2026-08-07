@@ -45,4 +45,7 @@ longestSubarray_bruteforce(arr,k)
 arr = [1, -1, 5, -2, 3]
 k = 3
 longestSubarray_opt(arr,k)
+arr = [1, 2, 5, 2, 3]
+k = 3
+longestSubarray_opt(arr,k)
 
